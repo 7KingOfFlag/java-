@@ -1,0 +1,52 @@
+import java.util.Calendar;
+
+public class Student {
+	private String name,gender;
+	private int year;
+	private Calendar now = Calendar.getInstance();		
+	public Student() {
+		
+	}
+	public Student(String _name, int _age, String _gender ) {
+		
+		this.setName(_name);
+		this.setAge(_age);
+		this.setGender(_gender);
+	}
+	public Student(String _name) {
+		
+		this.setName(_name);
+		this.setAge(-1);
+		this.setGender();
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public boolean setGender(String gender) {
+		if (gender.equals("男") || gender.equals("女")) {
+			this.gender = gender;
+			return true;
+		}else {
+			this.gender = null;
+			return true;
+		}
+		
+	}
+	public int getAge() {
+		return now.get(Calendar.YEAR)-year;
+	}
+	public void setAge(int age) {
+		this.year = now.get(Calendar.YEAR)-age;
+	}
+
+	public void sayMyInfo() {
+		System.out.printf("姓名：%s\n年龄：%d岁\n性别：%s\n", name, this.getAge(),gender);
+	}
+	
+}

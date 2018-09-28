@@ -1,0 +1,53 @@
+package 判断生肖;
+
+import java.util.Scanner;
+
+public class Test {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("请输入的您的出生年份");
+		int year = Integer.parseInt(scanner.nextLine());
+		String shenXiao;
+		switch ((1900 - year)%12) { //1900年是鼠年
+		case 0:
+			shenXiao = "鼠";
+			break;
+		case 1:
+			shenXiao = "牛";
+			break;
+		case 2:
+			shenXiao = "虎";
+			break;
+		case 3:
+			shenXiao = "兔";
+			break;
+		case 4:
+			shenXiao = "龙";
+			break;
+		case 5:
+			shenXiao = "蛇";
+			break;
+		case 6:
+			shenXiao = "马";
+			break;
+		case 7:
+			shenXiao = "羊";
+			break;
+		case 8:
+			shenXiao = "猴";
+			break;
+		case 9:
+			shenXiao = "鸡";
+			break;
+		case 10:
+			shenXiao = "狗";
+			break;
+		case 11:
+			shenXiao = "猪";
+			break;
+		default:
+			break;
+		}
+		System.out.printf("您在%d年出生属%s!", year, shenXiao);
+	}
+}

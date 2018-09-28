@@ -1,0 +1,8 @@
+package ÅĞ¶ÏÉúĞ¤;
+
+import com.sun.java_cup.internal.runtime.Scanner;
+
+public class Test {
+	public static void main(String[] args) {
+		Scanner scanner = new java.util.Scanner(System.in);
+}

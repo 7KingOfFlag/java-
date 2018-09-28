@@ -1,0 +1,4 @@
+
+public class Test {
+	Student student1 =new Student("³ÂÓÀ±ê", 20, "ÄĞ");	
+}

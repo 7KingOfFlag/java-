@@ -1,0 +1,34 @@
+import java.util.Calendar;
+
+public class Student {
+	private String name,gender;
+	private int year;
+	public Student() {
+		
+	}
+	public Student(String _name, int _age, String _gender ) {
+		Calendar now = Calendar.getInstance();		
+		this.setName(_name);
+		this.year = now.get(Calendar.YEAR)-_age;
+		this.setGender(_gender);
+		now.clear();
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public boolean setGender(String gender) {
+		if (gender.equals("ÄÐ") || gender.equals("Å®") ) {
+			return false;
+		}else {
+			this.gender = gender;
+			return true;
+		}
+		
+	}
+}

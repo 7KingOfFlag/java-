@@ -1,0 +1,12 @@
+import java.util.Calendar;
+
+public class Student {
+	public String name,gender;
+	public int year;
+	public Student(String _name, int _age, String _gender ) {
+		Calendar now = Calendar.getInstance();		
+		this.name = _name;
+		this.year = now.get(Calendar.YEAR)-_age;
+		this.gender = _gender;
+	}
+}
